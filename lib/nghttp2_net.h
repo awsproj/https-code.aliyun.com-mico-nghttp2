@@ -88,4 +88,10 @@ STIN uint16_t ntohs(uint16_t netshort) {
 
 #endif /* WIN32 */
 
+#ifdef _MICO_NET_
+#define htons(x) lwip_htons(x)
+#define ntohs(x) lwip_ntohs(x)
+#define htonl(x) lwip_htonl(x)
+#define ntohl(x) lwip_ntohl(x)
+#endif
 #endif /* NGHTTP2_NET_H */
