@@ -42,10 +42,10 @@
 /* The number of bytes of frame header. */
 #define NGHTTP2_FRAME_HDLEN 9
 
-#define NGHTTP2_MAX_FRAME_SIZE_MAX ((1 << 24) - 1)
-#define NGHTTP2_MAX_FRAME_SIZE_MIN (1 << 14)
+#define NGHTTP2_MAX_FRAME_SIZE_MAX ((1 << 22) - 1)
+#define NGHTTP2_MAX_FRAME_SIZE_MIN (1 << 12)
 
-#define NGHTTP2_MAX_PAYLOADLEN 16384
+#define NGHTTP2_MAX_PAYLOADLEN 4096
 /* The one frame buffer length for tranmission.  We may use several of
    them to support CONTINUATION.  To account for Pad Length field, we
    allocate extra 1 byte, which saves extra large memcopying. */
